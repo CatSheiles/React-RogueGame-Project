@@ -20,6 +20,14 @@ class World {
         return this.entities[0];
     }
 
+    add(entity) {
+        this.entities.push(entity);
+    }
+
+    remove(entity) { //super cool array called filter which filters loot out
+        this.entities = this.entities.filter(e => e!== entity);
+    }
+
     //make sure player or any entity starts in a blank space
     moveToSpace(entity){
         for (let x = entity.x; x < this.width; x++) {
@@ -41,9 +49,22 @@ class World {
             );
     }
 
+    getEntityAtLocation(x, y){
+        return this.entities.find(entity => entity.x === x && entity.y === y);
+    }
+
     movePlayer(dx, dy){
         let tempPlayer = this.player.copyPlayer(); //when moving player check for walls
         tempPlayer.move(dx, dy);
+
+        //see if player has bumped into any loot!
+        let entity = this.getEntityAtLocation(tempPlayer.x, tempPlayer.y);
+        if(entity) {
+            console.log(entity);
+            entity.action('bump', this);
+            return;
+        }
+
         if(this.isWall(tempPlayer.x, tempPlayer.y)){
             console.log(`Way blocked at ${tempPlayer.x}:${tempPlayer.y}!`);
         } else {

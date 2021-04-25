@@ -1,21 +1,21 @@
-class Player {
-    constructor(x, y, size) {
-        this.x = x;
-        this.y = y;
-        this.size = size;
-    }
+import Entity from './Entity.js';
 
+class Player extends Entity {
+    inventory = []; //create an inventory so that loot items can be added
+
+    attributes = {
+        name: 'Player',
+        ascii: '@',
+        health: 10
+    }
     //move delta x & delta y when move is called to move player
     move(dx, dy) {
         this.x += dx;
         this.y += dy;
     }
 
-    draw(context) {
-        context.fillStyle = '#f00';
-        context.textBaseline = 'hanging';
-        context.font = '16px Helvetica';
-        context.fillText('@', this.x * this.size, this.y * this.size);
+    add(item){ //when player bumps into loot add item to inventory
+        this.inventory.push(item);
     }
 
     copyPlayer(){

@@ -1,4 +1,4 @@
-# Getting Started with Create React App
+# Way cool Rogue like game with Create React App.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -18,19 +18,34 @@ You will also see any lint errors in the console.
 A take on the old school traditional Rogue game where Rogue is an @ symbol - use arrow keys to move
 around the screen and keep away from the killer 'K' bosses!
 
-Incorporating React hooks, an input manager and more.
+Incorporating React hooks, an input manager, rot-js and more.
 
 Game Set Up
 ===========
 - Create a board to play on
 - Create a player
-- Give the player the "Rogue" them - ie '@' symbol
+- Give the player the "Rogue" theme - of course being the '@' symbol
 - Set up a dungeon world for the game - randomly generated used rot.js which is a cool library - rot sets up a randomGen dungeon.
 - Set collision of player when hitting walls or going off the board.
+- Set a base class that entities(monsters swords etc) inheret from so that all loot items tie in together.
 - Add Monsters (entities) Bugsy (entities) apples n pears (entities because it's just cooler!)
+- When player bumps into a wall - say 'way or route blocked'.
+- When player picks up loot need an inventory to show on the screen
+- Color and style and loot list needs to be added of course
 
-Here is a screenshot just after dungeon and player are set up and ready to rock around the world!
+Here's a screenshot just after dungeon and player are set up and ready to rock around the world!
+
 ![title](PlayerSetUp.PNG)
+
+
+Inventory List
+==============
+@ = player
+/ = sword
+! = health potion
+$ = gold coin of course
+'#' = armour
+
 
 
 
