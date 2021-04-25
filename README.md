@@ -15,7 +15,8 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 ## Cat's 'Rogue like game'
-A take on the old school traditional Rogue game where Rogue is an @ symbol and K is a boss.
+A take on the old school traditional Rogue game where Rogue is an @ symbol - use arrow keys to move
+around the screen and keep away from the killer 'K' bosses!
 
 Incorporating React hooks, an input manager and more.
 
