@@ -1,20 +1,33 @@
 import React, { useRef, useEffect, useState } from 'react';
 import InputManager from './InputManager.js';
 import Player from './Player.js';
+import World from './World.js';
 
 const ReactRogue = ({width,height,tilesize}) => {
     const canvasRef = useRef();
-    const [player, setPlayer] = useState(new Player(1, 2, tilesize));
+   // const [player, setPlayer] = useState(new Player(1, 2, tilesize));
+    //define world, usestate method allow us to change the world
+    const [world, setWorld] = useState(new World(width, height, tilesize));
 
     let inputManager = new InputManager();
     const handleInput = (action,data) => {
         console.log(`handle input: ${action}:${JSON.stringify(data)}`);
 
-        let newPlayer = new Player();
-        Object.assign(newPlayer, player);
-        newPlayer.move(data.x, data.y);
-        setPlayer(newPlayer);
+        let newWorld = new World();
+        Object.assign(newWorld, world);
+        newWorld.movePlayer(data.x, data.y); //this is moving the player
+        setWorld(newWorld);
     };
+
+    useEffect(() => {
+        console.log("Create Map!");
+        let newWorld = new World();
+        Object.assign(newWorld, world);
+        newWorld.createCellularMap();
+        newWorld.moveToSpace(world.player);
+        setWorld(newWorld);
+        //eslint-disable-next-line react-hooks/exhaustive-deps
+    }, []);
 
     useEffect(() =>{
         console.log('Bind input');
@@ -29,7 +42,8 @@ const ReactRogue = ({width,height,tilesize}) => {
         console.log('Draw to canvas');
         const ctx = canvasRef.current.getContext('2d');
         ctx.clearRect(0, 0, width * tilesize, height * tilesize);
-        player.draw(ctx);
+        //draw world before calling player
+        world.draw(ctx);
     });
 
     return (

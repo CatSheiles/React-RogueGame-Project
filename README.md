@@ -20,4 +20,17 @@ around the screen and keep away from the killer 'K' bosses!
 
 Incorporating React hooks, an input manager and more.
 
+Game Set Up
+===========
+- Create a board to play on
+- Create a player
+- Give the player the "Rogue" them - ie '@' symbol
+- Set up a dungeon world for the game - randomly generated used rot.js which is a cool library - rot sets up a randomGen dungeon.
+- Set collision of player when hitting walls or going off the board.
+- Add Monsters (entities) Bugsy (entities) apples n pears (entities because it's just cooler!)
+
+Here is a screenshot just after dungeon and player are set up and ready to rock around the world!
+![title](PlayerSetUp.PNG)
+
+
 
