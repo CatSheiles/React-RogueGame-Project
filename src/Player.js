@@ -5,11 +5,12 @@ class Player extends Entity {
 
     attributes = {
         name: 'Player',
-        ascii: '@',
+        ascii: '🤴',
         health: 10
     }
     //move delta x & delta y when move is called to move player
     move(dx, dy) {
+        if (this.attributes.health <= 0) return;
         this.x += dx;
         this.y += dy;
     }

@@ -40,11 +40,21 @@ Here's a screenshot just after dungeon and player are set up and ready to rock a
 
 Inventory List
 ==============
-@ = player
-/ = sword
-! = health potion
-$ = gold coin of course
-'#' = armour
+@ = player - changed it up to King with Crown
+/ = sword - changed it up to sword emoji
+! = health potion - changed it up to hotdog
+$ = gold coin of course - changed it up to moneybag
+'#' = armour - changed it up to red truck
+
+Monsters List
+=============
+My take on funking it to the 21st C with emojis
+Dragon - Dragon emoji
+Ogre - Japanese ogre emoji (looks like a hairy red devil)
+Wookie - Ninja cat emoji
+Slime - Green Slime face emoji
+
+
 
 
 

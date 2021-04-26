@@ -8,6 +8,7 @@ class World {
         this.height = height;
         this.tilesize = tilesize;
         this.entities = [new Player(0, 0, 16)]; //everything inside the world is going to be an 'entity' so setting entity here
+        this.history = ['You enter the Dungeon', '---'];
 
         //after width,height,tilesize constructor, creating 2D array
         this.worldmap = new Array(this.width);
@@ -24,15 +25,15 @@ class World {
         this.entities.push(entity);
     }
 
-    remove(entity) { //super cool array called filter which filters loot out
+    remove(entity) { //super cool magic array called filter which filters loot out
         this.entities = this.entities.filter(e => e!== entity);
     }
 
-    //make sure player or any entity starts in a blank space
+    //make sure player or any entity starts in a blank space - oh the math!
     moveToSpace(entity){
         for (let x = entity.x; x < this.width; x++) {
             for (let y = entity.y; y < this.height; y++) {
-               if(this.worldmap[x][y] === 0){
+               if(this.worldmap[x][y] === 0 && !this.getEntityAtLocation(x, y)) {
                    entity.x = x ;
                    entity.y = y;
                    return;
@@ -46,7 +47,7 @@ class World {
             this.worldmap[x] === undefined || 
             this.worldmap[y] === undefined || 
             this.worldmap[x][y] === 1
-            );
+        );
     }
 
     getEntityAtLocation(x, y){
@@ -105,6 +106,12 @@ class World {
             this.tilesize, 
             this.tilesize
         );
+    }
+
+    addToHistory(history) {
+        this.history.push(history);
+        //cut the history lines down - instead of just keeping all history just keep a few lines
+        if (this.history.length > 6) this.history.shift();
     }
 }
 export default World;
