@@ -23,15 +23,15 @@ Incorporating React hooks, an input manager, rot-js and more.
 Game Set Up
 ===========
 - Create a board to play on
-- Create a player
-- Give the player the "Rogue" theme - of course being the '@' symbol
+- Create a player - give it a Rogue theme '@' symbol - but wait that's too old - update it to emojis!!
 - Set up a dungeon world for the game - randomly generated used rot.js which is a cool library - rot sets up a randomGen dungeon.
 - Set collision of player when hitting walls or going off the board.
 - Set a base class that entities(monsters swords etc) inheret from so that all loot items tie in together.
-- Add Monsters (entities) Bugsy (entities) apples n pears (entities because it's just cooler!)
+- Add Monsters (entities) Loot (entities) stairs to go down to new level (entities because it's just cooler!)
 - When player bumps into a wall - say 'way or route blocked'.
-- When player picks up loot need an inventory to show on the screen
-- Color and style and loot list needs to be added of course
+- When player picks up loot need an inventory to show on the screen and cap it so it doesn't just keep scrolling down!
+- When player dies send message.
+- Color and style and loot list needs to be added of course.
 
 Here's a screenshot just after dungeon and player are set up and ready to rock around the world!
 
@@ -45,6 +45,7 @@ Inventory List
 ! = health potion - changed it up to hotdog
 $ = gold coin of course - changed it up to moneybag
 '#' = armour - changed it up to red truck
+Emoji down arrow in yellow = stairs down - they will be towards the bottom right of each randomGen world.
 
 Monsters List
 =============
@@ -54,6 +55,8 @@ Ogre - Japanese ogre emoji (looks like a hairy red devil)
 Wookie - Ninja cat emoji
 Slime - Green Slime face emoji
 
+the end - it works.
+Ok, so you can add lots of extras sometime in the future and new levels.
 
 
 
