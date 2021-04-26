@@ -55,8 +55,12 @@ Ogre - Japanese ogre emoji (looks like a hairy red devil)
 Wookie - Ninja cat emoji
 Slime - Green Slime face emoji
 
+![title](PlayerWorldSample.PNG)
+
 the end - it works.
 Ok, so you can add lots of extras sometime in the future and new levels.
+
+
 
 
 
