@@ -40,25 +40,26 @@ Here's a screenshot just after dungeon and player are set up and ready to rock a
 
 Inventory List
 ==============
-@ = player - changed it up to King with Crown
-/ = sword - changed it up to sword emoji
-! = health potion - changed it up to hotdog
-$ = gold coin of course - changed it up to moneybag
-'#' = armour - changed it up to red truck
-Emoji down arrow in yellow = stairs down - they will be towards the bottom right of each randomGen world.
+- @ = player - changed it up to King with Crown
+- / = sword - changed it up to sword emoji
+- ! = health potion - changed it up to hotdog
+- $ = gold coin of course - changed it up to moneybag
+- '#' = armour - changed it up to red truck
+- Emoji down arrow in yellow = stairs down - they will be towards the bottom right of each randomGen world.
 
 Monsters List
 =============
 My take on funking it to the 21st C with emojis
-Dragon - Dragon emoji
-Ogre - Japanese ogre emoji (looks like a hairy red devil)
-Wookie - Ninja cat emoji
-Slime - Green Slime face emoji
+- Dragon - Dragon emoji
+- Ogre - Japanese ogre emoji (looks like a hairy red devil)
+- Wookie - Ninja cat emoji
+- Slime - Green Slime face emoji
 
 ![title](PlayerWorldSample.PNG)
 
-the end - it works.
-Ok, so you can add lots of extras sometime in the future and new levels.
+
+- The end - it works.
+- Ok, so you can add lots of extras sometime in the future and new levels.
 
 
 
