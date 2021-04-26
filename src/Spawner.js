@@ -1,5 +1,6 @@
 import Loot from './Loot.js';
 import Monster from './Monster.js';
+import Stairs from './Stairs.js'; 
 
 //the offset's in loot n monsters are just because!! 
 //just use- for asthetics makes it look like everything sits in the right space
@@ -93,6 +94,14 @@ class Spawner {
                 monsterTable[getRandomInt(monsterTable.length)]
             );
         });
+    }
+    spawnStairs() {
+        let stairs = new Stairs(
+            this.world.width - 10,
+            this.world.height - 10, 
+            this.world.tilesize);
+        this.world.add(stairs);
+        this.world.moveToSpace(stairs);
     }
 }
 
